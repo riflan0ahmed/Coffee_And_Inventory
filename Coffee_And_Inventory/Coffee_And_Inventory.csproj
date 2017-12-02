@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A19EFBC4-2069-4FBF-AA99-8C3C72C7645C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coffee_And_Inventory</RootNamespace>
+    <AssemblyName>Coffee_And_Inventory</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDelivery.Designer.cs">
+      <DependentUpon>frmDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAccounts_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccounts_admin.Designer.cs">
+      <DependentUpon>ucAccounts_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucAccounts_sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccounts_sales.Designer.cs">
+      <DependentUpon>ucAccounts_sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAccount_inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccount_inventory.Designer.cs">
+      <DependentUpon>ucAccount_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardAdmin.Designer.cs">
+      <DependentUpon>ucDashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_accounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_accounts.Designer.cs">
+      <DependentUpon>ucDashboardAdmin_accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_delivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_delivery.Designer.cs">
+      <DependentUpon>ucDashboardAdmin_delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_employee.Designer.cs">
+      <DependentUpon>ucDashboardAdmin_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_inventory.Designer.cs">
+      <DependentUpon>ucDashboardAdmin_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardAdmin_sales.Designer.cs">
+      <DependentUpon>ucDashboardAdmin_sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardDelivery_delivered.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardDelivery_delivered.Designer.cs">
+      <DependentUpon>ucDashboardDelivery_delivered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardDelivery_delivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardDelivery_delivery.Designer.cs">
+      <DependentUpon>ucDashboardDelivery_delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardInventory.Designer.cs">
+      <DependentUpon>ucDashboardInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardDelivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardDelivery.Designer.cs">
+      <DependentUpon>ucDashboardDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardfrmMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardfrmMain.Designer.cs">
+      <DependentUpon>ucDashboardfrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAccounts_delivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccounts_delivery.Designer.cs">
+      <DependentUpon>ucAccounts_delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboardSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboardSales.Designer.cs">
+      <DependentUpon>ucDashboardSales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDelivery.resx">
+      <DependentUpon>frmDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAccounts_admin.resx">
+      <DependentUpon>ucAccounts_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ucAccounts_sales.resx">
+      <DependentUpon>ucAccounts_sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAccount_inventory.resx">
+      <DependentUpon>ucAccount_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardAdmin.resx">
+      <DependentUpon>ucDashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardAdmin_accounts.resx">
+      <DependentUpon>ucDashboardAdmin_accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardAdmin_delivery.resx">
+      <DependentUpon>ucDashboardAdmin_delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardAdmin_employee.resx">
+      <DependentUpon>ucDashboardAdmin_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardAdmin_inventory.resx">
+      <DependentUpon>ucDashboardAdmin_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardAdmin_sales.resx">
+      <DependentUpon>ucDashboardAdmin_sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardDelivery_delivered.resx">
+      <DependentUpon>ucDashboardDelivery_delivered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardDelivery_delivery.resx">
+      <DependentUpon>ucDashboardDelivery_delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardInventory.resx">
+      <DependentUpon>ucDashboardInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardDelivery.resx">
+      <DependentUpon>ucDashboardDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardfrmMain.resx">
+      <DependentUpon>ucDashboardfrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAccounts_delivery.resx">
+      <DependentUpon>ucAccounts_delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboardSales.resx">
+      <DependentUpon>ucDashboardSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
